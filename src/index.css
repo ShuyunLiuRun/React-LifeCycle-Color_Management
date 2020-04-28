@@ -8,10 +8,12 @@ body {
 }
 
 .color {
-  width: 45%;
-  height: 200px;
-  background-color: lightgrey;
-  margin-top: 6px;
+  width: 350px;
+  height: 220px;
+  float:left;
+  margin: 16px;
+  border-style: solid;
+  border-color: black;
 }
 
 .showcolor {
