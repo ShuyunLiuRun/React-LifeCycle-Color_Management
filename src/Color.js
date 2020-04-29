@@ -12,7 +12,7 @@ export class Color extends React.Component{
    */
     // Background color will be set initially as grey. 
     // If use CWM only, background color will not change.
-  componentWillMount(){
+    UNSAFE_componentWillMount(){
     this.style = { backgroundColor:"#CCC" }
   }
   //return true when the component should be updated
@@ -28,25 +28,25 @@ export class Color extends React.Component{
    * in the componentDidUpdate.
    * 
    * But in the exercise, the color title will not be changed 
-   * while the alert showing. I need to clear the settings in one 
-   * of the methods otherwise the component will be confused. 
+   * while the alert showing.  
    *  
    * These two methods are both in charge of interact DOM 
    * after component updating. 
    */
-  componentWillUpdate(nextProps){
+  UNSAFE_componentWillUpdate(nextProps){
     const { title, rating } = this.props
     this.style=null
-    // this.refs.title.style.backgroundColor = "red"
-    // this.refs.title.style.color = "white"
+    this.refs.title.style.backgroundColor = "red"
+    this.refs.title.style.color = "white"
     alert(`${title}: rating ${rating} -> ${nextProps.rating}`)
   }
   componentDidUpdate(prevProps){
     const { title, rating } = this.props
     const status = (rating>prevProps.rating) ? 'better' : 'worse'
     console.log(`${title} color is getting ${status}`)
-    this.refs.title.style.backgroundColor = "red"
-    this.refs.title.color = "black"
+    this.refs.title.style.backgroundColor = "blue"
+    this.refs.title.color = "green"
+    console.log(this)
   }
   
   render(){

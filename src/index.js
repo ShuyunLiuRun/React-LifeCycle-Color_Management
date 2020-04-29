@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './Star.css';
 import './index.css';
 import App from './App'
+import HiddenMessages from './HiddenMessages'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <App  />
+    <HiddenMessages />
   </React.StrictMode>,
   document.getElementById('root')
 );
