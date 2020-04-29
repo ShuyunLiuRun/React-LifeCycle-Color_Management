@@ -6,6 +6,9 @@ import React from 'react'
  * 
  * 当父组件HiddenMessages修改了hide的属性，componentWillReceiveProps方法允许用户对
  * 相应的State进行更新。
+ * 
+ * The reason using State in the child component is to exercise using componentWillReceiveProps 
+ * changing the state in child component. Otherwise we should use stateless component instead.
  */
 
 class HiddenMessage extends React.Component{
