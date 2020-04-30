@@ -8,10 +8,11 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App  />
+    <App></App>
     <HiddenMessages />
   </React.StrictMode>,
   document.getElementById('root')
+
 );
 
 // If you want your app to work offline and load faster, you can change
